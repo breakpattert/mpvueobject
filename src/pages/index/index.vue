@@ -19,6 +19,7 @@
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+    <p @click="tabherf">跳转</p>
   </div>
 </template>
 
@@ -38,6 +39,13 @@ export default {
   },
 
   methods: {
+  	tabherf(){
+  		let detil = [{id:4},{type:2}];
+  		wx.navigateTo({
+  			url:'/pages/logs/main?gooddetil='+JSON.stringify(detil)
+  		})
+  		
+  	},
     bindViewTap () {
       const url = '../logs/main'
       wx.navigateTo({ url })

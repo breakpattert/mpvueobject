@@ -5,8 +5,8 @@
       <button @click="increment">+</button>
       <button @click="decrement">-</button>
     </p>
-
-    <a href="/pages/index/main" class="home">去往首页</a>
+	<navigator url="/pages/logs/main?goods=1">去往首页</navigator>
+   <!-- <a href="/pages/logs/main" class="home">去往首页</a>-->
   </div>
 </template>
 
@@ -20,6 +20,12 @@ export default {
       return store.state.count
     }
   },
+    data () {
+    return {
+      
+      goods:''
+    }
+  },
   methods: {
     increment () {
       store.commit('increment')
@@ -27,6 +33,11 @@ export default {
     decrement () {
       store.commit('decrement')
     }
+  },
+   onLoad(options){
+  	this.goods=options;
+  	console.log(this.goods,8)
+  
   }
 }
 </script>

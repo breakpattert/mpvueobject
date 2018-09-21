@@ -10,7 +10,7 @@
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
 	"appid": "wxd0207ceb99c246c2",
-	"projectname": "wechatdemo",
+	"projectname": "mpvuedemo",
 	"condition": {
 		"search": {
 			"current": -1,
